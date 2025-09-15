@@ -15,9 +15,25 @@ library('moderndive')
 data("early_january_weather")
 ```
 
+### Describing the Dataset
 The **early_january_weather** dataset has `r nrow(early_january_weather)` observations and is composed of `r ncol(early_january_weather)` variables/columns. The columns are as following:  
   `r paste(names(early_january_weather), collapse = ", ")`. 
   
 Notable important variables include the **year range** (`r range(early_january_weather$year)`), **mean temperature** (`r mean(early_january_weather$temp)`), and the **mean wind speed** (`r mean(early_january_weather$wind_speed)`).
+
+### Making the Scaterplot 
+The scatterplot below shows the relationship between **time (hours)** and **temperature**. We will use tidyverse to make the scatterplot. 
+
+```{r}
+library(tidyverse)
+
+ggplot(
+  data = early_january_weather,
+  mapping = aes(x = time_hour, y = temp, color = humid)) +
+  geom_point()
+
+
+```
+
   
 ## Problem 2 
