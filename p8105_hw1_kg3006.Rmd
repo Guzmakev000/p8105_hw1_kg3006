@@ -56,4 +56,12 @@ hw1 <- tibble(
   occupation = as.factor(c("Doctor", "Professor", "Nurse", "Doctor", "Professor",   "Nurse", "Doctor", "Professor", "Nurse", "Doctor"))) #factor with 3 variables 
 ```
 
-### Taking the mean of each variable that was created 
+### Taking the mean of each variable 
+We will take the mean of the varibles using the pull function. 
+```{r}
+ hw1 %>% 
+  pull(size) %>% 
+  mean()
+```
+
+The mean for the **size** variable is `r hw1 %>% pull(size) %>% mean()`. This function works. 
