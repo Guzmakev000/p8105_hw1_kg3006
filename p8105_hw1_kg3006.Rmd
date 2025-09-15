@@ -35,5 +35,7 @@ ggplot(
 
 ```
 
+### Describing The Scatterplot
+This scatterplot shows time acrross a couple of weeks in Janurary. Temperatures ranged from `r min(early_january_weather$temp)` to `r max(early_january_weather$temp)` degrees Fahrenheit. The color gradient represents humidity levels, with lighter colors indicating higher humidity. There is an increase in temperature during as Janurary progresses. It also appears that higher temperatures also have higher himidity levels. 
   
 ## Problem 2 
