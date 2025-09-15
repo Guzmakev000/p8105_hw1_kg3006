@@ -18,6 +18,6 @@ data("early_january_weather")
 The **early_january_weather** dataset has `r nrow(early_january_weather)` observations and is composed of `r ncol(early_january_weather)` variables/columns. The columns are as following:  
   `r paste(names(early_january_weather), collapse = ", ")`. 
   
-Notable important variables include the **year range** (`r range(early_january_weather$year)`), **mean temperature** (`r mean(early_january_weather$temp)`), and the **mean wind speed** (`r mean(early_january_weather$wind)`).
+Notable important variables include the **year range** (`r range(early_january_weather$year)`), **mean temperature** (`r mean(early_january_weather$temp)`), and the **mean wind speed** (`r mean(early_january_weather$wind_speed)`).
   
 ## Problem 2 
