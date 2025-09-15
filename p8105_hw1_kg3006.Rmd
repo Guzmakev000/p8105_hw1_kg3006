@@ -51,12 +51,14 @@ In this problem we will create a dataframe ourselves and analyze it.
 ```{r}
 hw1 <- tibble(
   size = rnorm(10, sd = 1), # 10 observatoins created 
-  greater_than_0 = size > 0, # True if size is greater than 0 
+  size_greater_than_0 = size > 0, # True if size is greater than 0 
   book_character = c("Alice", "Max", "Kevin", "Jose", "Hannah", "Mirna", "Sam", "Mia", "Omar", "Edwin"),
   occupation = as.factor(c("Doctor", "Professor", "Nurse", "Doctor", "Professor",   "Nurse", "Doctor", "Professor", "Nurse", "Doctor"))) #factor with 3 variables 
 ```
 
 ### Taking the mean of each variable 
+
+#### Size
 We will take the mean of the varibles using the pull function. 
 ```{r}
  hw1 %>% 
@@ -65,3 +67,41 @@ We will take the mean of the varibles using the pull function.
 ```
 
 The mean for the **size** variable is `r hw1 %>% pull(size) %>% mean()`. This function works. 
+
+#### Logical variable 
+
+Taking the mean of the logical variable **size_greater_than_0**. 
+
+```{r}
+ hw1 %>% 
+  pull(size_greater_than_0) %>% 
+  mean()
+```
+
+This also works. The mean here is `r hw1 %>% pull(size_greater_than_0) %>% mean()`. However, since this is treating False as 0 and True as 1 and there are only 10 samples, then the 0.1 means that 1 person is coded as 1 and the rest are coded as 0. 
+
+#### Book characters 
+
+Taking the mean of the **book_character** variable.
+
+```{r}
+ hw1 %>% 
+  pull(book_character) %>% 
+  mean()
+```
+
+Taking the mean of a character variable does not work. 
+
+#### Occupation 
+Taking the mean of the **occupation** variable.
+
+```{r}
+ hw1 %>% 
+  pull(occupation) %>% 
+  mean()
+```
+
+This also does not work for factor variables. 
+
+###
+
