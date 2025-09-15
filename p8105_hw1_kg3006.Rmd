@@ -52,7 +52,8 @@ In this problem we will create a dataframe ourselves and analyze it.
 hw1 <- tibble(
   size = rnorm(10, sd = 1), # 10 observatoins created 
   greater_than_0 = size > 0, # True if size is greater than 0 
-  letters = letters[1:10], # First 10 letters of the alphabet
+  book_character = c("Alice", "Max", "Kevin", "Jose", "Hannah", "Mirna", "Sam", "Mia", "Omar", "Edwin"),
   occupation = as.factor(c("Doctor", "Professor", "Nurse", "Doctor", "Professor",   "Nurse", "Doctor", "Professor", "Nurse", "Doctor"))) #factor with 3 variables 
 ```
 
+### Taking the mean of each variable that was created 
